@@ -33,7 +33,10 @@
             this.btnLovecraft = new System.Windows.Forms.Button();
             this.numWords = new System.Windows.Forms.NumericUpDown();
             this.lblNumberInfo = new System.Windows.Forms.Label();
+            this.numSize = new System.Windows.Forms.NumericUpDown();
+            this.lblFnt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numWords)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSize)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConan
@@ -73,17 +76,17 @@
             // numWords
             // 
             this.numWords.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.numWords.Location = new System.Drawing.Point(1024, 65);
+            this.numWords.Location = new System.Drawing.Point(1074, 65);
             this.numWords.Maximum = new decimal(new int[] {
             2000,
             0,
             0,
             0});
             this.numWords.Name = "numWords";
-            this.numWords.Size = new System.Drawing.Size(120, 23);
+            this.numWords.Size = new System.Drawing.Size(70, 23);
             this.numWords.TabIndex = 3;
             this.numWords.Value = new decimal(new int[] {
-            500,
+            150,
             0,
             0,
             0});
@@ -93,11 +96,43 @@
             this.lblNumberInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumberInfo.AutoSize = true;
             this.lblNumberInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblNumberInfo.Location = new System.Drawing.Point(1024, 36);
+            this.lblNumberInfo.Location = new System.Drawing.Point(1074, 22);
             this.lblNumberInfo.Name = "lblNumberInfo";
-            this.lblNumberInfo.Size = new System.Drawing.Size(103, 15);
+            this.lblNumberInfo.Size = new System.Drawing.Size(65, 30);
             this.lblNumberInfo.TabIndex = 4;
-            this.lblNumberInfo.Text = "Number of words:";
+            this.lblNumberInfo.Text = "Number of\r\nwords\r\n";
+            this.lblNumberInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numSize
+            // 
+            this.numSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numSize.Location = new System.Drawing.Point(1012, 65);
+            this.numSize.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numSize.Name = "numSize";
+            this.numSize.Size = new System.Drawing.Size(56, 23);
+            this.numSize.TabIndex = 5;
+            this.numSize.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.numSize.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // lblFnt
+            // 
+            this.lblFnt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFnt.AutoSize = true;
+            this.lblFnt.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblFnt.Location = new System.Drawing.Point(1012, 30);
+            this.lblFnt.Name = "lblFnt";
+            this.lblFnt.Size = new System.Drawing.Size(56, 15);
+            this.lblFnt.TabIndex = 6;
+            this.lblFnt.Text = "Font size:";
+            this.lblFnt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MarcusChainSentenceGenerator
             // 
@@ -105,6 +140,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1156, 745);
+            this.Controls.Add(this.lblFnt);
+            this.Controls.Add(this.numSize);
             this.Controls.Add(this.lblNumberInfo);
             this.Controls.Add(this.numWords);
             this.Controls.Add(this.btnLovecraft);
@@ -113,7 +150,9 @@
             this.Name = "MarcusChainSentenceGenerator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcus Chain Sentence Generator";
+            this.Load += new System.EventHandler(this.MarcusChainSentenceGenerator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numWords)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSize)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,5 +165,7 @@
         private Button btnLovecraft;
         private NumericUpDown numWords;
         private Label lblNumberInfo;
+        private NumericUpDown numSize;
+        private Label lblFnt;
     }
 }

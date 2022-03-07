@@ -29,5 +29,17 @@ namespace MarkovChainSentenceGenerator
             string text = textGenerator.PredifinedText(folderName, numberOfWords);
             textView.Text = text;
         }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            Font fnt = new Font(textView.Font.FontFamily, Convert.ToSingle(numSize.Value));
+            textView.Font = fnt;
+        }
+
+        private void MarcusChainSentenceGenerator_Load(object sender, EventArgs e)
+        {
+            Font fnt = new Font(textView.Font.FontFamily, Convert.ToSingle(numSize.Value));
+            textView.Font = fnt;
+        }
     }
 }
