@@ -48,9 +48,20 @@ namespace MarkovChainSentenceGenerator.Generator
                     else
                         lastWordSentenceEnder = false;
                 }
+                //if (NextWordExists(bigrams, word))
+                    //bigrams.Remove(word);
                 textList.Add(word);
             }
             return textList;
+        }
+
+        private bool NextWordExists(Dictionary<string, Dictionary<string, int>> bigrams, string word)
+        {
+            if (!bigrams.ContainsKey(word))
+                return false;
+            if (bigrams[word].Count == 0)
+                return false;
+            return true;
         }
 
         private string GenerateNextWord(Dictionary<string, int> dictionary)
@@ -69,7 +80,7 @@ namespace MarkovChainSentenceGenerator.Generator
                 {
                     dictionary[kvp.Key]--;
                     if(dictionary[kvp.Key] == 0)
-                        dictionary.Remove(kvp.Key);
+                        dictionary[kvp.Key]++;
                     return kvp.Key;
                 }
             }
