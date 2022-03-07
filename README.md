@@ -1,8 +1,9 @@
 ## Markov Chain Sentence Generator
 
-A first iteration of a relatively simple program that generetes random text by using Markov Chain. So far the program only uses 1 book by Robert E. Howard (Hour of Dragon) to generate the text.
+A first iteration of a relatively simple program that generetes random text by using Markov Chain. So far the program uses multiple books to generate text.
+Also as a warning, all the given books that I use in this project are in public domain, so there is no need to worry about copyrtight.
 
 So far I also plan to:
-- [ ] Add multiple books to generation
-- [ ] Add other authors for generation (probably Lovecraft and some others)
+- [x] Add multiple books to generation
+- [x] Add other authors for generation (probably Lovecraft and some others)
 - [ ] Optimize the code

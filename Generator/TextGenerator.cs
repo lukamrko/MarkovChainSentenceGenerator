@@ -16,9 +16,9 @@ namespace MarkovChainSentenceGenerator.Generator
             this.bigramGenerator = new BigramGenerator();
         }
 
-        public string ConanText(int limit)
+        public string PredifinedText(string folderName, int limit)
         {
-            Dictionary<string, Dictionary<string, int>> bigrams = this.bigramGenerator.ConanBigrams();
+            Dictionary<string, Dictionary<string, int>> bigrams = this.bigramGenerator.PredifinedBigrams(folderName);
             bigrams.Remove("");
             List<string> textList = GenereteTextArray(bigrams, limit);
             string connectedTextList = string.Join(" ", textList);

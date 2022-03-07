@@ -8,11 +8,11 @@ namespace MarkovChainSentenceGenerator.Generator
 {
     internal class BigramGenerator
     {
-        public Dictionary<string, Dictionary<string, int>> ConanBigrams()
+        public Dictionary<string, Dictionary<string, int>> PredifinedBigrams(string folderName)
         {
             Dictionary<string, Dictionary<string, int>> conanBigrams = new Dictionary<string, Dictionary<string, int>>();
             string nextWord = "";
-            foreach (string putanja in Directory.EnumerateFiles(Environment.CurrentDirectory + "\\conan\\", "*.txt"))
+            foreach (string putanja in Directory.EnumerateFiles(Environment.CurrentDirectory + folderName, "*.txt"))
             {
                 string[] lines = File.ReadAllLines(putanja);
                 for (int i = 0; i < lines.Length; i++)
