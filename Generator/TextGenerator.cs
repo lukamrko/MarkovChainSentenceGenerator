@@ -9,16 +9,16 @@ namespace MarkovChainSentenceGenerator.Generator
 {
     internal class TextGenerator
     {
-        ConanBigramGenerator conanBigramGenerator;
+        BigramGenerator bigramGenerator;
 
         public TextGenerator()
         {
-            this.conanBigramGenerator = new ConanBigramGenerator();
+            this.bigramGenerator = new BigramGenerator();
         }
 
         public string ConanText(int limit)
         {
-            Dictionary<string, Dictionary<string, int>> bigrams = this.conanBigramGenerator.ConanBigrams();
+            Dictionary<string, Dictionary<string, int>> bigrams = this.bigramGenerator.ConanBigrams();
             bigrams.Remove("");
             List<string> textList = GenereteTextArray(bigrams, limit);
             string connectedTextList = string.Join(" ", textList);
@@ -66,7 +66,12 @@ namespace MarkovChainSentenceGenerator.Generator
             {
                 counter += kvp.Value;
                 if (counter >= random)
+                {
+                    dictionary[kvp.Key]--;
+                    if(dictionary[kvp.Key] == 0)
+                        dictionary.Remove(kvp.Key);
                     return kvp.Key;
+                }
             }
             return " ";
         }

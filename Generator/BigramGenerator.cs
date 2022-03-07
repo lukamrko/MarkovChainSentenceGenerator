@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MarkovChainSentenceGenerator.Generator
 {
-    internal class ConanBigramGenerator
+    internal class BigramGenerator
     {
         public Dictionary<string, Dictionary<string, int>> ConanBigrams()
         {
