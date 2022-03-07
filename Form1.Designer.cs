@@ -48,7 +48,8 @@
             // 
             // textView
             // 
-            this.textView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.textView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textView.BackColor = System.Drawing.SystemColors.Control;
             this.textView.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -71,6 +72,7 @@
             // 
             // numWords
             // 
+            this.numWords.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numWords.Location = new System.Drawing.Point(1024, 65);
             this.numWords.Maximum = new decimal(new int[] {
             2000,
@@ -88,6 +90,7 @@
             // 
             // lblNumberInfo
             // 
+            this.lblNumberInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumberInfo.AutoSize = true;
             this.lblNumberInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblNumberInfo.Location = new System.Drawing.Point(1024, 36);
