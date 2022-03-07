@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkovChainSentenceGenerator", "MarkovChainSentenceGenerator.csproj", "{7A179F32-E2D1-4F7F-97E9-5D33B7C2AE55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A179F32-E2D1-4F7F-97E9-5D33B7C2AE55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A179F32-E2D1-4F7F-97E9-5D33B7C2AE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A179F32-E2D1-4F7F-97E9-5D33B7C2AE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A179F32-E2D1-4F7F-97E9-5D33B7C2AE55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00C61AEF-043B-497C-A23C-303CE47FE78A}
+	EndGlobalSection
+EndGlobal
