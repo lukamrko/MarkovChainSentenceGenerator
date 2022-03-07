@@ -52,7 +52,7 @@
             this.textView.Multiline = true;
             this.textView.Name = "textView";
             this.textView.ReadOnly = true;
-            this.textView.Size = new System.Drawing.Size(1051, 569);
+            this.textView.Size = new System.Drawing.Size(1117, 599);
             this.textView.TabIndex = 1;
             // 
             // MarcusChainSentenceGenerator
@@ -60,7 +60,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1090, 687);
+            this.ClientSize = new System.Drawing.Size(1156, 745);
             this.Controls.Add(this.textView);
             this.Controls.Add(this.btnConan);
             this.Name = "MarcusChainSentenceGenerator";
